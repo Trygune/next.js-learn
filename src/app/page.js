@@ -1,66 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { circle, stack } from '../../styled-system/patterns'
+import { css } from '../../styled-system/css'
 
-export default function Home() {
+const Home = async () => {
+  // const data = await fetch('https://api.vercel.app/blog')
+  // const posts = await data.json()
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <main>
+        <h1>React Advanced Next.JS</h1>
+        <div
+          className={stack({
+            align: 'center',
+            justify: 'center',
+            h: 'screen',
+            gap: '8',
+          })}
+        >
+          <div
+            className={circle({
+              size: '100px',
+              bg: 'orange.400',
+              color: 'white',
+            })}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            CSS
+          </div>
+
+          <h1 className={css({ fontSize: '2xl', fontWeight: 'bold' })}>
+            Panda Is Running Hello 🐼!
+          </h1>
         </div>
+        {/* <ul>
+          {posts.map((post) => (
+            <li key={post.id}>{post.title}</li>
+          ))}
+        </ul> */}
       </main>
-    </div>
-  );
+    </>
+  )
 }
+
+export default Home
