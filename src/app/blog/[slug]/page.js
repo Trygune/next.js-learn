@@ -1,6 +1,6 @@
 const article = async ({ params }) => {
   const { slug } = await params
-  console.log('slug: ', slug)
+  console.log('url name slug: ', slug)
 
   return (
     <div>

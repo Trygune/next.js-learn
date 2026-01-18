@@ -3,9 +3,12 @@ import { css } from '../../../styled-system/css'
 import Nav from '@/components/Nav/Nav'
 import Link from 'next/link'
 import Button from '../Button/Button'
+import withlocation from '@/hoc/withlocation'
 // import useLocalStorage from '../../hooks/useLocalStorage'
 
-const Header = () => {
+const Header = (props) => {
+  console.log('header props ith HOC', props)
+
   // const [Test, setTest] = useLocalStorage('test')
   const logged = () => {
     console.log('logged')
@@ -26,6 +29,7 @@ const Header = () => {
         alignItems: 'center',
         px: '8',
         py: '3.5',
+        shadow: 'sm',
       })}
     >
       <Nav />
@@ -41,4 +45,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default withlocation(Header)
