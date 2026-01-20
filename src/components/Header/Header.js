@@ -1,24 +1,25 @@
 'use client'
 import { css } from '../../../styled-system/css'
-import Nav from '@/components/Nav/Nav'
+import { Nav } from '@/components'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import withlocation from '@/hoc/withlocation'
-// import useLocalStorage from '../../hooks/useLocalStorage'
+import useLocalStorage from '../../hooks/useLocalStorage'
 
 const Header = (props) => {
+  const [name, setName] = useLocalStorage('sample')
+
   console.log('header props ith HOC', props)
 
-  // const [Test, setTest] = useLocalStorage('test')
   const logged = () => {
-    console.log('logged')
-    // setTest('this is log')
+    console.log('logged clicked')
+    setName('Hook Test')
   }
   const signed = () => {
-    console.log('signed')
-    // setTest('this is sign')
+    console.log('signed clicked')
+    setName('this is sign')
   }
-  // console.log('key', Test)
+  console.log('key', name)
 
   return (
     <div
@@ -37,7 +38,7 @@ const Header = (props) => {
         <Link href="/login">
           <Button handleclick={logged}>Login</Button>
         </Link>
-        <Link href="/sign">
+        <Link href="/login">
           <Button handleclick={signed}>Sign Up</Button>
         </Link>
       </div>
