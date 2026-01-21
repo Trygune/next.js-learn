@@ -1,5 +1,5 @@
 import Input from '../Input/Input'
-const InputEmail = ({ ...props }) => (
+const InputEmail = (props) => (
   <Input intype="email" inplace="Enter Your Email..." {...props} />
 )
 

@@ -9,10 +9,11 @@ import { H2, Space } from '@/components/Typography'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { usePageTitle } from '@/hooks'
+import InputName from '@/components/InputName/InputName'
 import Link from 'next/link'
 
-const Login = () => {
-  usePageTitle('Login | TryGun')
+const Resgister = () => {
+  usePageTitle('SignUp | TryGun')
 
   const router = useRouter()
   const [formValue, setFormValue] = useState({})
@@ -55,7 +56,7 @@ const Login = () => {
         />
       }
       <Space sp="1" />
-      <H2>Welcome</H2>
+      <H2>Sign Up</H2>
       <Space />
       <div
         className={css({
@@ -64,16 +65,17 @@ const Login = () => {
         })}
       >
         <Form handleSubmit={loginhandleSubmit}>
+          <InputName onChange={(value) => inputHandleChange('name', value)} />
           <InputEmail onChange={(value) => inputHandleChange('email', value)} />
           <InputPassword
             onChange={(value) => inputHandleChange('password', value)}
             inplaceholder={'Enter Your Password...'}
           />
           <Button w={'full'} type="submit">
-            Submit
+            Resgister
           </Button>
           <div>
-            <Link href="/forgot">Forgot your password?</Link>
+            <Link href="/login">Already have an acount?</Link>
           </div>
         </Form>
       </div>
@@ -81,4 +83,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Resgister

@@ -4,7 +4,7 @@ import Nav from '@/components/Nav/Nav'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import withlocation from '@/hoc/withlocation'
-import useLocalStorage from '../../hooks/useLocalStorage'
+import { useLocalStorage } from '@/hooks'
 
 const Header = (props) => {
   const [myvalue, setMyValue] = useLocalStorage('Hook Test')
@@ -38,7 +38,7 @@ const Header = (props) => {
         <Link href="/login">
           <Button handleclick={logged}>Login</Button>
         </Link>
-        <Link href="/login">
+        <Link href="/register">
           <Button handleclick={signed}>Sign Up</Button>
         </Link>
       </div>

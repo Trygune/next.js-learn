@@ -2,19 +2,16 @@
 import { css } from '../../../styled-system/css'
 import Form from '@/components/Form/Form'
 import Button from '@/components/Button/Button'
-import InputEmail from '@/components/InputEmail/InputEmail'
 import InputPassword from '@/components/InputPassword/InputPassword'
 import Image from 'next/image'
 import { H2, Space } from '@/components/Typography'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { usePageTitle } from '@/hooks'
-import Link from 'next/link'
 
-const Login = () => {
-  usePageTitle('Login | TryGun')
+const Reset = () => {
+  usePageTitle('Reset | TryGun')
 
-  const router = useRouter()
   const [formValue, setFormValue] = useState({})
   const inputHandleChange = (name, value) => {
     setFormValue({
@@ -27,13 +24,8 @@ const Login = () => {
 
   const loginhandleSubmit = (event) => {
     if (event) event.preventDefault()
-    console.log('pathname', pathname)
-
-    //handle calling API
     console.log('Form Submitted', formValue)
-
-    //if success
-    router.push('/')
+    console.log('pathname', pathname)
   }
   return (
     <div
@@ -55,7 +47,7 @@ const Login = () => {
         />
       }
       <Space sp="1" />
-      <H2>Welcome</H2>
+      <H2>Reset Your Password</H2>
       <Space />
       <div
         className={css({
@@ -64,21 +56,21 @@ const Login = () => {
         })}
       >
         <Form handleSubmit={loginhandleSubmit}>
-          <InputEmail onChange={(value) => inputHandleChange('email', value)} />
           <InputPassword
             onChange={(value) => inputHandleChange('password', value)}
             inplaceholder={'Enter Your Password...'}
           />
+          <InputPassword
+            onChange={(value) => inputHandleChange('password', value)}
+            inplaceholder={'Enter Your Password Again...'}
+          />
           <Button w={'full'} type="submit">
-            Submit
+            Reset Password
           </Button>
-          <div>
-            <Link href="/forgot">Forgot your password?</Link>
-          </div>
         </Form>
       </div>
     </div>
   )
 }
 
-export default Login
+export default Reset
