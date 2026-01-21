@@ -1,5 +1,5 @@
 import { circle, stack } from '../../styled-system/patterns'
-import { css } from '../../styled-system/css'
+import { H1, H3, Space } from '@/components/Typography'
 
 const Home = async () => {
   // const data = await fetch('https://api.vercel.app/blog')
@@ -8,7 +8,8 @@ const Home = async () => {
   return (
     <>
       <main>
-        <h1>React Advanced Next.JS</h1>
+        <Space sp="4" />
+        <H1>React Advanced Next.JS</H1>
         <div
           className={stack({
             align: 'center',
@@ -27,9 +28,7 @@ const Home = async () => {
             CSS
           </div>
 
-          <h1 className={css({ fontSize: '2xl', fontWeight: 'bold' })}>
-            Panda Is Running Hello 🐼!
-          </h1>
+          <H3>Panda Is Running Hello 🐼!</H3>
         </div>
         {/* <ul>
           {posts.map((post) => (

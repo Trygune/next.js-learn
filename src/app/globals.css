@@ -1,1 +1,102 @@
+/* -------------------------------
+   Layer declaration for Panda CSS
+--------------------------------- */
 @layer reset, base, tokens, recipes, utilities;
+
+/* -------------------------------
+   Tokens: colors, typography, spacing
+--------------------------------- */
+@layer tokens {
+  :root {
+    /* Colors */
+    --color-bg: #fff;
+    --color-text: #00042cff;
+    --color-primary: rgb(40, 96, 248);
+    --color-secondary: #00042cff;
+    --color-light: rgba(0,0,0,0.1);
+
+    /* فونت‌ها */
+    --font-body: var(--font-geist-sans);
+    --font-heading: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-2xl: 32px;
+    --text-3xl: 40px;
+
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 48px;
+  }
+
+  /* Dark mode */
+  [data-theme='dark'] {
+    --color-bg: #00042cff;
+    --color-text: #fff;
+    --color-primary: rgb(40, 96, 248);
+    --color-secondary: #ccc;
+    --color-light: rgba(255,255,255,0.1);
+  }
+}
+
+/* -------------------------------
+   Base styles
+--------------------------------- */
+@layer base {
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  p {
+    margin: 0 0 var(--space-3) 0;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  code {
+    font-family: var(--font-mono);
+  }
+}
+
+/* -------------------------------
+   Reset
+--------------------------------- */
+@layer reset {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* -------------------------------
+   Utilities
+--------------------------------- */
+@layer utilities {
+  .text-primary { color: var(--color-primary); }
+  .bg-primary { background-color: var(--color-primary); }
+  .rounded-card { border-radius: 12px; }
+}

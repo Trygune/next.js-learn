@@ -1,8 +1,9 @@
 const theme = {
-  color: {
+  colors: {
     light: 'rgba(0,0,0,0.1)',
-    primary: 'blue',
+    primary: 'primary',
     secondary: 'white',
+    lastly: '#00042cff',
   },
   typography: {
     h1: {

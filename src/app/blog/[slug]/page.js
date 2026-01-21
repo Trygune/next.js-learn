@@ -1,10 +1,12 @@
+import { H1 } from '@/components/Typography'
+
 const article = async ({ params }) => {
   const { slug } = await params
   console.log('url name slug: ', slug)
 
   return (
     <div>
-      <h1>{slug} Page</h1>
+      <H1>{slug} Page</H1>
     </div>
   )
 }

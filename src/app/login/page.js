@@ -1,8 +1,11 @@
 'use client'
 import { css } from '../../../styled-system/css'
-import { InputEmail, InputPassword, Button } from '@/components'
 import Form from '@/components/Form/Form'
+import Button from '@/components/Button/Button'
+import InputEmail from '@/components/InputEmail/InputEmail'
+import InputPassword from '@/components/InputPassword/InputPassword'
 import Image from 'next/image'
+import { H2 } from '@/components/Typography'
 import { usePathname } from 'next/navigation'
 
 const Login = () => {
@@ -32,14 +35,7 @@ const Login = () => {
           loading="eager"
         />
       }
-      <h2
-        className={css({
-          fontSize: '2xl',
-          fontWeight: 'bold',
-        })}
-      >
-        TryGun
-      </h2>
+      <H2>Welcome</H2>
       <Form handleSubmit={loginhandleSubmit}>
         <InputEmail />
         <InputPassword />

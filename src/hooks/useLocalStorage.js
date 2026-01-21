@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-const useLocalStorage = (key, initialValue) => {
+const useLocalStorage = (key, initialValue = []) => {
   const [value, setValue] = useState(() => {
     try {
       const stored = window.localStorage.getItem(key)
