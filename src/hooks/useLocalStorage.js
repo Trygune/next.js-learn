@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react'
+const isClient = typeof window !== 'undefined'
 const useLocalStorage = (key, initialValue = []) => {
   const [value, setValue] = useState(() => {
-    try {
-      const stored = window.localStorage.getItem(key)
-      return stored ? JSON.parse(stored) : initialValue
-    } catch (error) {
-      console.log(error)
-      return initialValue
+    if (isClient) {
+      try {
+        const stored = window.localStorage.getItem(key)
+        return stored ? JSON.parse(stored) : initialValue
+      } catch (error) {
+        console.log(error)
+        return initialValue
+      }
+    } else {
+      console.log('SSR Server -1')
     }
   })
   useEffect(() => {

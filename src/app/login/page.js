@@ -10,11 +10,11 @@ import { usePathname } from 'next/navigation'
 
 const Login = () => {
   const pathname = usePathname()
-  console.log(pathname)
+  console.log('pathname',pathname)
 
   const loginhandleSubmit = (event) => {
     if (event) event.preventDefault()
-    console.log('Submitted')
+    console.log('Form Submitted')
   }
   return (
     <div
