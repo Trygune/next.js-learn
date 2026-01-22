@@ -45,15 +45,13 @@ const Login = () => {
         flexDir: 'column',
       })}
     >
-      {
-        <Image
-          src="/trygun.PNG"
-          alt="logo"
-          width={100}
-          height={100}
-          loading="eager"
-        />
-      }
+      <Image
+        src="/trygun.PNG"
+        alt="logo"
+        width={100}
+        height={100}
+        loading="eager"
+      />
       <Space sp="1" />
       <H2>Welcome</H2>
       <Space />
@@ -72,7 +70,14 @@ const Login = () => {
           <Button w={'full'} type="submit">
             Submit
           </Button>
-          <div>
+          <div
+            className={css({
+              display: 'flex',
+              flexDir: 'column',
+              textDecoration: 'underline',
+            })}
+          >
+            <Link href="/register">Sign Up</Link>
             <Link href="/forgot">Forgot your password?</Link>
           </div>
         </Form>

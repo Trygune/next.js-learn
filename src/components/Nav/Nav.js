@@ -1,15 +1,58 @@
-import Link from 'next/link'
+import Image from 'next/image'
 import { css } from '../../../styled-system/css'
+import Link from 'next/link'
+import Button from '../Button/Button'
+import { useLocalStorage } from '@/hooks'
 
 const Nav = () => {
+  const [myvalue, setMyValue] = useLocalStorage('Hook Test')
+
+  const logged = () => {
+    console.log('logged clicked')
+    setMyValue('This is Log in')
+  }
+  const signed = () => {
+    console.log('signed clicked')
+    setMyValue('This is Sign in')
+  }
+  console.log('key', myvalue)
   return (
-    <header className={css({ display: 'flex', gap: '4' })}>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/blog">Blog</Link>
-      <Link href="/blog/first-post">First Post</Link>
-      <Link href="/blog/second-post">Second Post</Link>
-    </header>
+    <nav
+      className={css({
+        width: 'full',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        gap: '4',
+      })}
+    >
+      <Link href="/">
+        <Image
+          src="/code.png"
+          alt="logo"
+          width={130}
+          height={130}
+          loading="eager"
+        />
+      </Link>
+      <div className={css({ display: 'flex', gap: '3' })}>
+        <Link href="/login">
+          <Button
+            handleclick={logged}
+            txtcolor={'text'}
+            changetxt={'bg'}
+            bgcolor={'transparent'}
+            bord={'none'}
+            bordw={'0px'}
+          >
+            Login
+          </Button>
+        </Link>
+        <Link href="/register">
+          <Button handleclick={signed}>Sign Up</Button>
+        </Link>
+      </div>
+    </nav>
   )
 }
 

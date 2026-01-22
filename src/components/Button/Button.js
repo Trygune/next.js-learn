@@ -1,20 +1,35 @@
 import { css } from '../../../styled-system/css'
 
-const Button = ({ children, handleclick = () => {}, w, ...props }) => {
+const Button = ({
+  children,
+  handleclick = () => {},
+  w = 'max-content',
+  bord = 'inset',
+  bordw = '2px',
+  changetxt = 'primary',
+  bgcolor = 'primary',
+  txtcolor = 'white',
+  ...props
+}) => {
   return (
     <button
       className={css({
-        color: 'text',
+        color: txtcolor,
         p: '4',
-        width: `${w}`,
-        backgroundColor: 'bg',
+        width: w,
+        backgroundColor: bgcolor,
         borderRadius: 'lg',
-        border: '1px solid rgba(0,0,0,0.1)',
+        border: bord,
+        borderColor: 'primary',
+        borderWidth: bordw,
+        borderStyle: 'solid',
         cursor: 'pointer',
         transitionDuration: 'fast',
+        transitionDuration: 'normal',
+        fontWeight: 'medium',
         _hover: {
-          backgroundColor: 'primary',
-          color: 'bg',
+          backgroundColor: txtcolor,
+          color: changetxt,
         },
       })}
       onClick={handleclick}

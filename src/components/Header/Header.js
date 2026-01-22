@@ -1,47 +1,57 @@
-'use client'
 import { css } from '../../../styled-system/css'
 import Nav from '@/components/Nav/Nav'
+import withlocation from '@/hoc/withlocation'
+import { H2, Space } from '../Typography'
 import Link from 'next/link'
 import Button from '../Button/Button'
-import withlocation from '@/hoc/withlocation'
-import { useLocalStorage } from '@/hooks'
+import Container from '../Container/Container'
 
-const Header = (props) => {
-  const [myvalue, setMyValue] = useLocalStorage('Hook Test')
-
-  console.log('header props ith HOC', props)
-
-  const logged = () => {
-    console.log('logged clicked')
-    setMyValue('This is Log in')
-  }
-  const signed = () => {
-    console.log('signed clicked')
-    setMyValue('This is Sign in')
-  }
-  console.log('key', myvalue)
-
+const Header = () => {
   return (
     <div
       className={css({
         width: 'full',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        px: '8',
-        py: '3.5',
-        shadow: 'sm',
+        backgroundColor: 'whitesmoke',
       })}
     >
-      <Nav />
-      <div className={css({ display: 'flex', gap: '3' })}>
-        <Link href="/login">
-          <Button handleclick={logged}>Login</Button>
-        </Link>
-        <Link href="/register">
-          <Button handleclick={signed}>Sign Up</Button>
-        </Link>
-      </div>
+      <Container>
+        <Space sp="1" />
+        <Nav />
+        <Space sp="1" />
+        <div
+          className={css({
+            width: 'md',
+            mx: 'auto',
+            display: 'flex',
+            flexDir: 'column',
+            alignItems: 'center',
+            textAlign: 'justify',
+            textAlignLast: 'center',
+            spaceY: '1',
+          })}
+        >
+          <H2>Let&apos;s TryGun</H2>
+          <Space sp="2" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            fuga tempore dolores in recusandae maiores ipsam, omnis nisi non
+            dolor?
+          </p>
+          <Space sp="1" />
+          <Link href="/register">
+            <Button
+              handleclick={
+                () => {}
+                //signed
+              }
+              w={'xs'}
+            >
+              Sign Up
+            </Button>
+          </Link>
+        </div>
+        <Space sp="5" />
+      </Container>
     </div>
   )
 }

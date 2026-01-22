@@ -74,7 +74,11 @@ const Resgister = () => {
           <Button w={'full'} type="submit">
             Resgister
           </Button>
-          <div>
+          <div
+            className={css({
+              textDecoration: 'underline',
+            })}
+          >
             <Link href="/login">Already have an acount?</Link>
           </div>
         </Form>

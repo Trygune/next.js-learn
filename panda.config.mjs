@@ -22,6 +22,7 @@ export default defineConfig({
           text: { value: 'var(--color-text)' },
           primary: { value: 'var(--color-primary)' },
           secondary: { value: 'var(--color-secondary)' },
+          lightgray: { value: 'var(--color-lightgray)' },
           light: { value: 'var(--color-light)' },
         },
         fonts: {
@@ -54,7 +55,7 @@ export default defineConfig({
           6: { value: 'var(--space-6)' },
         },
         radii: {
-          card: { value: '12px' },
+          card: { value: '8px' },
         },
         lineHeights: {
           h1: { value: '48px' },

@@ -14,6 +14,7 @@
     --color-primary: rgb(40, 96, 248);
     --color-secondary: #00042cff;
     --color-light: rgba(0,0,0,0.1);
+    --color-lightgray: #6d6d6da2;
 
     /* فونت‌ها */
     --font-body: var(--font-geist-sans);
@@ -44,6 +45,7 @@
     --color-primary: rgb(40, 96, 248);
     --color-secondary: #ccc;
     --color-light: rgba(255,255,255,0.1);
+    --color-lightgray: #6d6d6da2;
   }
 }
 
@@ -57,25 +59,21 @@
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.5;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--color-text);
     margin: 0;
   }
 
   p {
-    margin: 0 0 var(--space-3) 0;
+    margin: 0;
   }
 
   a {
     color: var(--color-primary);
     text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 
   code {
