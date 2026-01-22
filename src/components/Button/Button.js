@@ -30,6 +30,7 @@ const Button = ({
         _hover: {
           backgroundColor: txtcolor,
           color: changetxt,
+          shadow: 'md',
         },
       })}
       onClick={handleclick}
