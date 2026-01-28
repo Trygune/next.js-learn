@@ -16,6 +16,12 @@
 # next.js
 /.next/
 /out/
+build/
+
+# Storybook
+storybook-static
+storybook.log
+*storybook.log
 
 # production
 /build
@@ -32,6 +38,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -43,5 +50,3 @@ next-env.d.ts
 ## Panda
 styled-system
 styled-system-studio
-*storybook.log
-storybook-static
