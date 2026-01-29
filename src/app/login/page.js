@@ -4,17 +4,18 @@ import Form from '@/components/Form/Form'
 import Button from '@/components/Button/Button'
 import InputEmail from '@/components/InputEmail/InputEmail'
 import InputPassword from '@/components/InputPassword/InputPassword'
-import Image from 'next/image'
-import { H2, Space } from '@/components/Typography'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import { useDispatch } from 'react-redux'
+import { login } from '@/store/slices/authSlice'
 import { useState } from 'react'
 import { usePageTitle } from '@/hooks'
 import Link from 'next/link'
+import FormLogo from '@/components/FormLogo/FormLogo'
 
 const Login = () => {
   usePageTitle('Login | TryGun')
-
-  const router = useRouter()
+  const dispatch = useDispatch()
+  // const router = useRouter()
   const [formValue, setFormValue] = useState({})
   const inputHandleChange = (name, value) => {
     setFormValue({
@@ -27,13 +28,17 @@ const Login = () => {
 
   const loginhandleSubmit = (event) => {
     if (event) event.preventDefault()
+    const userData = { id: 1, name: 'Farbod', email: 'Farbod@example.com' }
+
+    dispatch(login(userData))
+
     console.log('pathname', pathname)
 
     //handle calling API
     console.log('Form Submitted', formValue)
 
     //if success
-    router.push('/')
+    // router.push('/')
   }
   return (
     <div
@@ -45,16 +50,7 @@ const Login = () => {
         flexDir: 'column',
       })}
     >
-      <Image
-        src="/trygun.PNG"
-        alt="logo"
-        width={100}
-        height={100}
-        loading="eager"
-      />
-      <Space sp="1" />
-      <H2>Welcome</H2>
-      <Space />
+      <FormLogo>Welcome</FormLogo>
       <div
         className={css({
           maxWidth: 'lg',

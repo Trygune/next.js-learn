@@ -4,9 +4,10 @@ import JobCardInfo from '../JobCardInfo/JobCardInfo'
 import Tag from '../Tag/Tag'
 import { H4 } from '../Typography'
 
-const JobCardList = ({ jobnumber }) =>
-  Array.from({ length: jobnumber }).map((i) => (
-    <JobCard key={`jobcard-${i}`}>
+const JobCardList = ({ jobnumber }) => {
+  let newArray = Array.from({ length: jobnumber })
+  return newArray.map((i, index) => (
+    <JobCard key={`jobcard-${i}-${index}`}>
       <JobCardInfo>
         <Tag>TryGun Company</Tag>
         <H4 className="tag">Fornt-End Developer</H4>
@@ -15,5 +16,6 @@ const JobCardList = ({ jobnumber }) =>
       <JobCardDate>May 15th</JobCardDate>
     </JobCard>
   ))
+}
 
 export default JobCardList

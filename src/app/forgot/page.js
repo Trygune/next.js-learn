@@ -3,11 +3,10 @@ import { css } from '../../../styled-system/css'
 import Form from '@/components/Form/Form'
 import Button from '@/components/Button/Button'
 import InputEmail from '@/components/InputEmail/InputEmail'
-import Image from 'next/image'
-import { H2, Space } from '@/components/Typography'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { usePageTitle } from '@/hooks'
+import FormLogo from '@/components/FormLogo/FormLogo'
 
 const Forgot = () => {
   usePageTitle('Forgot | TryGun')
@@ -37,18 +36,7 @@ const Forgot = () => {
         flexDir: 'column',
       })}
     >
-      {
-        <Image
-          src="/trygun.PNG"
-          alt="logo"
-          width={100}
-          height={100}
-          loading="eager"
-        />
-      }
-      <Space sp="1" />
-      <H2>Forgot Your Password?</H2>
-      <Space />
+      <FormLogo>Forgot Your Password?</FormLogo>
       <div
         className={css({
           maxWidth: 'lg',

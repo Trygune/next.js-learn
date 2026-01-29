@@ -1,12 +1,16 @@
+'use client'
 import { css } from '../../../styled-system/css'
 import Nav from '@/components/Nav/Nav'
 import withlocation from '@/hoc/withlocation'
-import { H2, Space } from '../Typography'
+import { H2, H4, Space } from '../Typography'
 import Link from 'next/link'
 import Button from '../Button/Button'
 import Container from '../Container/Container'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+  const { isLoggedIn } = useSelector((state) => state.auth)
+
   return (
     <div
       className={css({
@@ -38,18 +42,21 @@ const Header = () => {
             dolor?
           </p>
           <Space sp="1" />
-          <Link href="/register">
-            <Button
-              handleclick={
-                () => {}
-                //signed
-              }
-              visual="primary"
-              widthSize={'md'}
-            >
-              Sign Up
-            </Button>
-          </Link>
+          {!isLoggedIn && (
+            <Link href="/register">
+              <Button
+                handleclick={
+                  () => {}
+                  //signed
+                }
+                visual="primary"
+                widthSize={'md'}
+              >
+                Sign Up
+              </Button>
+            </Link>
+          )}
+          {isLoggedIn && <H4> Welcome! </H4>}
         </div>
         <Space sp="5" />
       </Container>

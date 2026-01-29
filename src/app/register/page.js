@@ -4,13 +4,12 @@ import Form from '@/components/Form/Form'
 import Button from '@/components/Button/Button'
 import InputEmail from '@/components/InputEmail/InputEmail'
 import InputPassword from '@/components/InputPassword/InputPassword'
-import Image from 'next/image'
-import { H2, Space } from '@/components/Typography'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { usePageTitle } from '@/hooks'
 import InputName from '@/components/InputName/InputName'
 import Link from 'next/link'
+import FormLogo from '@/components/FormLogo/FormLogo'
 
 const Resgister = () => {
   usePageTitle('SignUp | TryGun')
@@ -46,18 +45,7 @@ const Resgister = () => {
         flexDir: 'column',
       })}
     >
-      {
-        <Image
-          src="/trygun.PNG"
-          alt="logo"
-          width={100}
-          height={100}
-          loading="eager"
-        />
-      }
-      <Space sp="1" />
-      <H2>Sign Up</H2>
-      <Space />
+      <FormLogo>Sign Up</FormLogo>
       <div
         className={css({
           maxWidth: 'lg',
