@@ -13,7 +13,7 @@
     --color-text: #00042cff;
     --color-primary: rgb(40, 96, 248);
     --color-secondary: #00042cff;
-    --color-light: rgba(0,0,0,0.1);
+    --color-light: rgba(0, 0, 0, 0.1);
     --color-lightgray: #6d6d6da2;
 
     /* فونت‌ها */
@@ -44,7 +44,7 @@
     --color-text: #fff;
     --color-primary: rgb(40, 96, 248);
     --color-secondary: #ccc;
-    --color-light: rgba(255,255,255,0.1);
+    --color-light: rgba(255, 255, 255, 0.1);
     --color-lightgray: #6d6d6da2;
   }
 }
@@ -62,7 +62,12 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     margin: 0;
   }
@@ -85,7 +90,9 @@
    Reset
 --------------------------------- */
 @layer reset {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 }
@@ -94,7 +101,13 @@
    Utilities
 --------------------------------- */
 @layer utilities {
-  .text-primary { color: var(--color-primary); }
-  .bg-primary { background-color: var(--color-primary); }
-  .rounded-card { border-radius: 12px; }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .rounded-card {
+    border-radius: 12px;
+  }
 }

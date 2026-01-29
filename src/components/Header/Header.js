@@ -44,7 +44,8 @@ const Header = () => {
                 () => {}
                 //signed
               }
-              w={'xs'}
+              visual="primary"
+              widthSize={'md'}
             >
               Sign Up
             </Button>

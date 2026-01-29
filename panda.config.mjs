@@ -66,9 +66,61 @@ export default defineConfig({
           h6: { value: '20px' },
         },
       },
+      recipes: {
+        button: {
+          base: {
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '4',
+            borderRadius: 'lg',
+            cursor: 'pointer',
+            transition: 'all 0.2s',
+            borderWidth: '2px',
+            borderStyle: 'solid',
+            fontWeight: 'medium',
+            outline: 'none',
+          },
+          variants: {
+            visual: {
+              primary: {
+                backgroundColor: 'primary',
+                color: 'white',
+                borderColor: 'primary',
+                _hover: {
+                  backgroundColor: 'white',
+                  color: 'primary',
+                  shadow: 'lg',
+                },
+              },
+              secondary: {
+                backgroundColor: 'transparent',
+                color: 'text',
+                borderColor: 'text',
+                _hover: { shadow: 'lg' },
+              },
+            },
+            widthSize: {
+              sm: { width: 'max-content' },
+              md: { width: 'sm' },
+              full: { width: 'full' },
+            },
+          },
+          defaultVariants: {
+            visual: 'primary',
+            widthSize: 'sm',
+          },
+        },
+      },
     },
   },
-
+  staticCss: {
+    recipes: {
+      button: ['*'],
+    },
+  },
   // The output directory for your css system
   outdir: 'styled-system',
+  // Makes css file
+  // emitCss: true,
 })

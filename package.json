@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "prepare": "panda codegen",
-    "start": "next start",
-    "lint": "eslint",
     "storybook": "storybook dev -p 6006",
+    "prepare": "panda codegen",
+    "lint": "eslint",
+    "build": "next build",
+    "start": "next start",
     "build-storybook": "storybook build"
   },
   "dependencies": {

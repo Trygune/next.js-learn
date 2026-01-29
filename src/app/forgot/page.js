@@ -57,7 +57,7 @@ const Forgot = () => {
       >
         <Form handleSubmit={loginhandleSubmit}>
           <InputEmail onChange={(value) => inputHandleChange('email', value)} />
-          <Button w={'full'} type="submit">
+          <Button visual="primary" widthSize={'full'} type="submit">
             Send Password Change Request
           </Button>
         </Form>

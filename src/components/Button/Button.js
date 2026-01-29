@@ -1,38 +1,15 @@
-import { css } from '../../../styled-system/css'
+import { button } from '../../../styled-system/recipes'
 
 const Button = ({
+  visual,
+  widthSize,
   children,
   handleclick = () => {},
-  w = 'max-content',
-  bord = 'inset',
-  bordw = '2px',
-  changetxt = 'primary',
-  bgcolor = 'primary',
-  txtcolor = 'white',
   ...props
 }) => {
   return (
     <button
-      className={css({
-        color: txtcolor,
-        p: '4',
-        width: w,
-        backgroundColor: bgcolor,
-        borderRadius: 'lg',
-        border: bord,
-        borderColor: 'primary',
-        borderWidth: bordw,
-        borderStyle: 'solid',
-        cursor: 'pointer',
-        transitionDuration: 'fast',
-        transitionDuration: 'normal',
-        fontWeight: 'medium',
-        _hover: {
-          backgroundColor: txtcolor,
-          color: changetxt,
-          shadow: 'md',
-        },
-      })}
+      className={button({ visual, widthSize })}
       onClick={handleclick}
       {...props}
     >

@@ -37,14 +37,7 @@ const Nav = () => {
       </Link>
       <div className={css({ display: 'flex', gap: '3' })}>
         <Link href="/login">
-          <Button
-            handleclick={logged}
-            txtcolor={'text'}
-            changetxt={'bg'}
-            bgcolor={'transparent'}
-            bord={'none'}
-            bordw={'0px'}
-          >
+          <Button handleclick={logged} visual="secondary" widthSize={'medium'}>
             Login
           </Button>
         </Link>

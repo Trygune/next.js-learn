@@ -64,7 +64,7 @@ const Reset = () => {
             onChange={(value) => inputHandleChange('password', value)}
             inplaceholder={'Enter Your Password Again...'}
           />
-          <Button w={'full'} type="submit">
+          <Button visual="primary" widthSize={'full'} type="submit">
             Reset Password
           </Button>
         </Form>

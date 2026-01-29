@@ -4,9 +4,9 @@ import JobCardInfo from '../JobCardInfo/JobCardInfo'
 import Tag from '../Tag/Tag'
 import { H4 } from '../Typography'
 
-const JobCardList = () =>
-  [0, 1].map((i) => (
-    <JobCard key={`car-${i}`}>
+const JobCardList = ({ jobnumber }) =>
+  Array.from({ length: jobnumber }).map((i) => (
+    <JobCard key={`jobcard-${i}`}>
       <JobCardInfo>
         <Tag>TryGun Company</Tag>
         <H4 className="tag">Fornt-End Developer</H4>

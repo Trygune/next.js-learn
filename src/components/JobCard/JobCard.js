@@ -15,6 +15,7 @@ const JobCard = ({ children }) => (
         columnGap: '0',
         cursor: 'pointer',
         color: 'lightgray',
+        overflowX: 'hidden',
         transitionDuration: 'fast',
         _hover: {
           backgroundColor: 'primary',

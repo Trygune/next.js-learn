@@ -67,7 +67,7 @@ const Login = () => {
             onChange={(value) => inputHandleChange('password', value)}
             inplaceholder={'Enter Your Password...'}
           />
-          <Button w={'full'} type="submit">
+          <Button visual="primary" widthSize={'full'} type="submit">
             Submit
           </Button>
           <div
