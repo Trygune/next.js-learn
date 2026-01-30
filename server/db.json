@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "farbod@example.com",
+      "password": "12345",
+      "name": "Farbod",
+      "role": "owner"
+    },
+    {
+      "id": "2",
+      "email": "ali@example.com",
+      "password": "12345",
+      "name": "Ali",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "email": "taha@example.com",
+      "password": "12345",
+      "name": "Taha",
+      "role": "user"
+    }
+  ],
+  "registrations": [
+    {
+      "id": "1",
+      "fullName": "Ali Rezeai",
+      "email": "ali@test.com",
+      "status": "pending"
+    }
+  ],
+  "forgot_requests": [
+    {
+      "id": "1",
+      "email": "farbod@example.com",
+      "token": "xyz-123",
+      "isUsed": false
+    }
+  ],
+  "jobs": [
+    {
+      "id": "1",
+      "title": "React Developer",
+      "company": "TechGun",
+      "salary": "20M - 30M",
+      "location": "Tehran",
+      "description": "Looking for a Redux master!"
+    },
+    {
+      "id": "2",
+      "title": "Next.js Expert",
+      "company": "GunFlow",
+      "salary": "35M+",
+      "location": "Remote",
+      "description": "App Router knowledge is required."
+    }
+  ]
+}

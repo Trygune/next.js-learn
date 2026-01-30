@@ -4,6 +4,7 @@ const Button = ({
   visual,
   widthSize,
   children,
+  isdisabled,
   handleclick = () => {},
   ...props
 }) => {
@@ -11,9 +12,10 @@ const Button = ({
     <button
       className={button({ visual, widthSize })}
       onClick={handleclick}
+      disabled={isdisabled}
       {...props}
     >
-      {children}
+      {isdisabled ? 'Checking...' : children}
     </button>
   )
 }

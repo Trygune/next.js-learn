@@ -4,19 +4,17 @@ import Link from 'next/link'
 import Button from '../Button/Button'
 import { useLocalStorage } from '@/hooks'
 import { useSelector } from 'react-redux'
+import { H4 } from '../Typography'
 
 const Nav = () => {
   const [myvalue, setMyValue] = useLocalStorage('Hook Test')
-  const { isLoggedIn } = useSelector((state) => state.auth)
+  const { user, isLoggedIn } = useSelector((state) => state.auth)
 
   const logged = () => {
     console.log('logged clicked')
     setMyValue('This is Log in')
   }
-  const loggedout = () => {
-    console.log('logged out clicked')
-    setMyValue('This is logged out')
-  }
+
   const signed = () => {
     console.log('signed clicked')
     setMyValue('This is Sign in')
@@ -59,11 +57,7 @@ const Nav = () => {
           </>
         )}
 
-        {isLoggedIn && (
-          <Link href="/">
-            <Button handleclick={loggedout}>Logout</Button>
-          </Link>
-        )}
+        {isLoggedIn && <H4> Welcome {user?.name}!</H4>}
       </div>
     </nav>
   )
