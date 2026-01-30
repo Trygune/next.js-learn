@@ -1,7 +1,9 @@
 import { css } from '../../../styled-system/css'
 import { Space } from '../Typography'
+import JobCardDate from '../JobCardDate/JobCardDate'
+import JobCardInfo from '../JobCardInfo/JobCardInfo'
 
-const JobCard = ({ children }) => (
+const JobCard = ({ data }) => (
   <>
     <div
       className={css({
@@ -31,7 +33,8 @@ const JobCard = ({ children }) => (
         },
       })}
     >
-      {children}
+      <JobCardInfo dataInfo={data} />
+      <JobCardDate>{data.date}</JobCardDate>
     </div>
     <Space />
   </>

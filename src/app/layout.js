@@ -3,6 +3,7 @@ import './globals.css'
 import MainNav from '@/components/MainNav/MainNav'
 import { Space } from '@/components/Typography'
 import StoreProvider from './StoreProvider'
+import { SkeletonTheme } from 'react-loading-skeleton'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -27,7 +28,9 @@ const RootLayout = ({ children }) => {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <MainNav />
         <Space sp="4" />
-        <StoreProvider>{children}</StoreProvider>
+        <StoreProvider>
+          <SkeletonTheme>{children}</SkeletonTheme>
+        </StoreProvider>
       </body>
     </html>
   )
