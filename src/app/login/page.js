@@ -14,6 +14,9 @@ import FormLogo from '@/components/FormLogo/FormLogo'
 
 const Login = () => {
   usePageTitle('Login | TryGun')
+
+  const pathname = usePathname()
+
   const dispatch = useDispatch()
   const router = useRouter()
 
@@ -28,22 +31,22 @@ const Login = () => {
     })
   }
 
-  const pathname = usePathname()
-
   const loginhandleSubmit = async (event) => {
     if (event) event.preventDefault()
     console.log('pathname', pathname)
 
+    // used logger
     const result = await dispatch(
       loginUser({
         email: formValue.email,
         password: formValue.password,
       })
     )
-    console.log('result', result)
 
     //handle calling API
     console.log('Checking form values:', formValue)
+
+    // used logger also
     console.log('Result from Redux:', result.payload)
 
     //if not success

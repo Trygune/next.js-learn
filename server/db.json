@@ -20,14 +20,22 @@
       "password": "12345",
       "name": "Taha",
       "role": "user"
+    },
+    {
+      "id": "40f617ca-3418-4eb7-a6f1-08ed72eb073b",
+      "name": "Arshia",
+      "email": "arshia@example.com",
+      "password": "1234",
+      "role": "user"
     }
   ],
   "registrations": [
     {
-      "id": "1",
-      "fullName": "Ali Rezeai",
-      "email": "ali@test.com",
-      "status": "pending"
+      "id": "40f617ca-3418-4eb7-a6f1-08ed72eb073b",
+      "name": "Arshia",
+      "email": "arshia@example.com",
+      "password": "1234",
+      "role": "user"
     }
   ],
   "forgot_requests": [
@@ -42,18 +50,29 @@
     {
       "id": "1",
       "title": "React Developer",
-      "company": "TechGun",
-      "salary": "20M - 30M",
-      "location": "Tehran",
+      "company": "TryGun",
+      "salary": "35M+",
+      "time": "FULL TIME",
+      "date": "May 15th",
       "description": "Looking for a Redux master!"
     },
     {
       "id": "2",
       "title": "Next.js Expert",
-      "company": "GunFlow",
-      "salary": "35M+",
-      "location": "Remote",
+      "company": "TechGun",
+      "salary": "20M - 30M",
+      "time": "PART TIME",
+      "date": "Jun 1st",
       "description": "App Router knowledge is required."
+    },
+    {
+      "id": "3",
+      "title": "Python Expert",
+      "company": "GunFlow",
+      "salary": "20M+",
+      "time": "PART TIME",
+      "date": "Aug 22nd",
+      "description": "Django and Flask experience needed."
     }
   ]
 }

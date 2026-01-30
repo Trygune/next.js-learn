@@ -4,8 +4,8 @@ import JobCardInfo from '../JobCardInfo/JobCardInfo'
 import Tag from '../Tag/Tag'
 import { H4 } from '../Typography'
 
-const JobCardList = ({ jobnumber }) => {
-  let newArray = Array.from({ length: jobnumber })
+const JobCardList = () => {
+  let newArray = Array.from({ length: 2 })
   return newArray.map((i, index) => (
     <JobCard key={`jobcard-${i}-${index}`}>
       <JobCardInfo>

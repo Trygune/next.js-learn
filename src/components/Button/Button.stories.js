@@ -54,6 +54,14 @@ export const Secondary = {
   },
 }
 
+export const Disabled = {
+  args: {
+    visual: 'primary',
+    widthSize: 'md',
+    isdisabled: true,
+  },
+}
+
 export const FullWidth = {
   args: {
     visual: 'primary',

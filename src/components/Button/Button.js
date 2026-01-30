@@ -1,4 +1,5 @@
 import { button } from '../../../styled-system/recipes'
+import { TfiReload } from 'react-icons/tfi'
 
 const Button = ({
   visual,
@@ -15,7 +16,7 @@ const Button = ({
       disabled={isdisabled}
       {...props}
     >
-      {isdisabled ? 'Checking...' : children}
+      {isdisabled ? <TfiReload /> : children}
     </button>
   )
 }

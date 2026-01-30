@@ -14,7 +14,7 @@ const Home = () => {
           <Space sp="4" />
           <H3>Gun Offers</H3>
           <Space sp="4" />
-          <JobCardList jobnumber={2} />
+          <JobCardList />
         </Container>
         <Space />
         <PageFooter />

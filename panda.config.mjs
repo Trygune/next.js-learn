@@ -80,6 +80,13 @@ export default defineConfig({
             borderStyle: 'solid',
             fontWeight: 'medium',
             outline: 'none',
+
+            _disabled: {
+              opacity: 0.6,
+              cursor: 'not-allowed',
+              boxShadow: 'none',
+              pointerEvents: 'none', // این باعث می‌شود hover هم غیرفعال شود
+            },
           },
           variants: {
             visual: {

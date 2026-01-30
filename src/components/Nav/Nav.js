@@ -37,8 +37,10 @@ const Nav = () => {
           src="/code.png"
           alt="logo"
           width={130}
-          height={130}
-          loading="eager"
+          height={'130'}
+          priority
+          sizes="130px"
+          style={{ width: '100%', height: 'auto', maxWidth: '130px' }}
         />
       </Link>
       <div className={css({ display: 'flex', gap: '3' })}>
