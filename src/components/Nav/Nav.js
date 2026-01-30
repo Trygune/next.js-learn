@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import { css } from '../../../styled-system/css'
 import Link from 'next/link'
@@ -20,6 +21,7 @@ const Nav = () => {
     setMyValue('This is Sign in')
   }
   console.log('key', myvalue)
+
   return (
     <nav
       className={css({

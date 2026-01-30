@@ -1,4 +1,3 @@
-'use client'
 import { H3, Space } from '@/components/Typography'
 import Header from '@/components/Header/Header'
 import Container from '@/components/Container/Container'

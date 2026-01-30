@@ -40,6 +40,7 @@ const Login = () => {
         password: formValue.password,
       })
     )
+    console.log('result', result)
 
     //handle calling API
     console.log('Checking form values:', formValue)
@@ -50,6 +51,7 @@ const Login = () => {
       console.log('email or password is incorrect')
     }
   }
+
   useEffect(() => {
     //if success
     if (isLoggedIn) {
@@ -57,6 +59,7 @@ const Login = () => {
       router.push('/')
     }
   }, [isLoggedIn, router])
+
   return (
     <div
       className={css({
