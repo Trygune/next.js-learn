@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Button Render Correctly 1`] = `
+<DocumentFragment>
+  <button
+    class="button button--visual_primary button--widthSize_sm"
+  >
+    Sample Button
+  </button>
+</DocumentFragment>
+`;
