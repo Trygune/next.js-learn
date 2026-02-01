@@ -1,9 +1,13 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { fetchData, postData } from '@/utils/fetchUrl'
+// for development purpose
+// import { fetchData, postData } from '@/utils/fetchUrl'
+import { fetchData } from '@/utils/fetchUrl'
 import { v4 as uuidv4 } from 'uuid'
 
 const loginUser = createAsyncThunk('auth/loginUser', async (credentials) => {
-  const result = await fetchData('users')
+  // for development purpose
+  // const result = await fetchData('users')
+  const result = await fetchData('api/auth.json')
   const user = result.find(
     (u) => u.email === credentials.email && u.password === credentials.password
   )
@@ -16,10 +20,19 @@ const registerUser = createAsyncThunk('auth/registerUser', async (newUser) => {
 
   const newRegisterUser = { ...newUser, id: userId }
 
-  await postData('users', newRegisterUser)
-  const result = await postData('registrations', newRegisterUser)
+  try {
+    return newRegisterUser
+  } catch (error) {
+    console.log('Registration simulated')
+    console.error('error registering user:', error)
+    return newRegisterUser
+  }
 
-  return result
+  // for development purpose
+  // await postData('users', newRegisterUser)
+  // const result = await postData('registrations', newRegisterUser)
+
+  // return result
 })
 
 const initialState = {

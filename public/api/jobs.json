@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "title": "React Developer",
+    "company": "TryGun",
+    "salary": "35M+",
+    "time": "FULL TIME",
+    "date": "May 15th",
+    "description": "Looking for a Redux master!"
+  },
+  {
+    "id": "2",
+    "title": "Next.js Expert",
+    "company": "TechGun",
+    "salary": "20M - 30M",
+    "time": "PART TIME",
+    "date": "Jun 1st",
+    "description": "App Router knowledge is required."
+  },
+  {
+    "id": "3",
+    "title": "Python Expert",
+    "company": "GunFlow",
+    "salary": "20M+",
+    "time": "PART TIME",
+    "date": "Aug 22nd",
+    "description": "Django and Flask experience needed."
+  }
+]

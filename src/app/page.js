@@ -8,7 +8,9 @@ import { fetchData } from '@/utils/fetchUrl'
 
 const Home = async () => {
   // این کد در سرور اجرا می‌شود (SSR واقعی)
-  const initialJobs = await fetchData('jobs')
+  //for dev
+  // const initialJobs = await fetchData('jobs')
+  const initialJobs = await fetchData('api/jobs.json')
   console.log('hey there here is a server log')
   console.log('initialJobs', initialJobs)
 
