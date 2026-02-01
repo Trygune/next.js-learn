@@ -2,10 +2,13 @@ import { css } from '../../../styled-system/css'
 const Input = ({
   intype = 'text',
   inplace = 'Write Your Text...',
+  onChange,
   ...props
 }) => {
   const handleOnChange = (event) => {
-    onChange(event.target.value)
+    if (onChange) {
+      onChange(event.target.value)
+    }
   }
 
   return (

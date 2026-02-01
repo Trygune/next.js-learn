@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Form Render Correctly 1`] = `
+<DocumentFragment>
+  <form
+    class="sy_2"
+  >
+    Sample Render Form
+  </form>
+</DocumentFragment>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`InputEmail Component Render Correctly 1`] = `
+<DocumentFragment>
+  <input
+    class="px_4 py_3 bd_1px_solid_rgba(0,0,0,0.1) bdr_md w_full"
+    placeholder="Enter Your Email..."
+    type="email"
+  />
+</DocumentFragment>
+`;

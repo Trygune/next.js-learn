@@ -14,7 +14,13 @@ const Space = ({ sp = '3' }) => {
 
   const style = { height: value, width: 'full' }
 
-  return <div className={css({ display: 'block' })} style={style} />
+  return (
+    <div
+      className={css({ display: 'block' })}
+      style={style}
+      data-testid="space-div"
+    />
+  )
 }
 
 export default Space
